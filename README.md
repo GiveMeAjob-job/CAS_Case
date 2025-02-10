@@ -52,6 +52,7 @@ CAS_Case/
 ├─ hurr_task2.py              # Script to process Historical Hurricane 2 (partial)
 ├─ data_validation.py         # Basic validation for each sheet
 ├─ management_request_2_complete.py  # Final integrated script for Mgmt Req 2
+├─ requirements.txt 
 └─ README.md                  # This file
 ```
 
@@ -61,7 +62,7 @@ CAS_Case/
 
 1. **Clone** this repository to your local machine:
    ```bash
-   git clone https://github.com/YourName/CAS_Case.git
+   git clone https://github.com/GiveMeAjob-job/CAS_Case.git
    ```
 2. **Open** the project in PyCharm (or your preferred IDE).
 3. **Create** and activate a Python virtual environment (optional but recommended).
