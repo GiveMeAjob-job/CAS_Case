@@ -1,4 +1,3 @@
-```markdown
 # CAS Case Study: Data Cleaning & Analysis
 
 This repository demonstrates a complete workflow for cleaning insurance exposures data, combining historical hurricane data, and fulfilling two core **Management Requests** (1 & 2) to visualize and analyze potential hurricane risks.
@@ -12,7 +11,7 @@ This repository demonstrates a complete workflow for cleaning insurance exposure
 - [Scripts Explanation](#scripts-explanation)
   - [clean_exposures.py](#clean_exposurespy)
   - [hurr1_task1.py](#hurr1_task1py)
-  - [hurr_task2.py (or hurr2)](#hurr_task2py-or-hurr2)
+  - [hurr_task2.py](#hurr_task2py-or-hurr2)
   - [management_request_2_complete.py (Final)](#management_request_2_completepy-final)
 - [How to Run](#how-to-run)
 - [Results & Outputs](#results--outputs)
