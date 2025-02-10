@@ -52,7 +52,6 @@ CAS_Case/
 ├─ hurr_task2.py              # Script to process Historical Hurricane 2 (partial)
 ├─ data_validation.py         # Basic validation for each sheet
 ├─ management_request_2_complete.py  # Final integrated script for Mgmt Req 2
-├─ requirements.txt           # (If you have a list of Python dependencies)
 └─ README.md                  # This file
 ```
 
@@ -154,7 +153,7 @@ Below is one example sequence that covers the entire pipeline:
    ```bash
    python hurr_task2.py
    ```
-   Or in some cases you have a final integrated script that merges Hurr1 & Hurr2. This typically outputs `hurr2_merged_with_h1_wind.csv`.
+   Or there is a final integrated script that merges Hurr1 & Hurr2. This outputs `hurr2_merged_with_h1_wind.csv`.
 
 4. **Management Request 2**  
    ```bash
@@ -191,10 +190,6 @@ MIT License
 Copyright (c) 2023 ...
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software...
 ```
-
-*(Replace with your actual licensing terms or remove entirely if not needed.)*
-
 ---
 
-**Enjoy analyzing your CAS Case Study!** If you have any questions or issues, feel free to open an issue or reach out.
 ```
