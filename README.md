@@ -181,9 +181,6 @@ In PyCharm, you can also right-click each script and select **“Run…”**. Ma
 ---
 
 ## License
-
-You may include a license here, e.g.:
-
 ```
 MIT License
 
