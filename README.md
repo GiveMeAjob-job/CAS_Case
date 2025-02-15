@@ -15,6 +15,10 @@ This repository demonstrates a complete workflow for cleaning insurance exposure
   - [management_request_2_complete.py (Final)](#management_request_2_completepy-final)
 - [How to Run](#how-to-run)
 - [Results & Outputs](#results--outputs)
+- [Interactive Underwriting Dashboard (app.py)](#interactive-underwriting-dashboard-apppy)
+  - [Features](#features)
+  - [How to Run the Streamlit App](#how-to-run-the-streamlit-app)
+  - [Usage](#usage)
 - [License](#license)
 
 ---
@@ -52,6 +56,7 @@ CAS_Case/
 ├─ hurr_task2.py              # Script to process Historical Hurricane 2 (partial)
 ├─ data_validation.py         # Basic validation for each sheet
 ├─ management_request_2_complete.py  # Final integrated script for Mgmt Req 2
+├─ app.py # Streamlit dashboard script (Interactive Underwriting Report)
 ├─ requirements.txt 
 └─ README.md                  # This file
 ```
@@ -180,6 +185,58 @@ In PyCharm, you can also right-click each script and select **“Run…”**. Ma
    - **Premium vs TIV** (line chart), etc.
 
 ---
+
+## Interactive Underwriting Dashboard (app.py)
+
+In addition to the offline scripts above, this repository includes a **Streamlit** application (`app.py`) that provides a **dynamic, filterable** dashboard. Underwriters can filter by **Location**, **Hurricane** (and year, if applicable), and specify how many **past X years** of policy data to display. The interface automatically updates charts and tables on the fly.
+
+### Features
+
+- **Location Filter**: Pick one or multiple locations from the exposures dataset.  
+- **Hurricane Filter**: Choose storms by name (and optional year).  
+- **Time Window (X years)**: Limit the exposures data to only the last X policy years.  
+- **Dynamic Charts**: Uses [Altair](https://altair-viz.github.io/) to plot TIV or other metrics.  
+- **Map**: data includes `Latitude`/`Longitude`, displays selected locations on a quick map.  
+- **Risk Summaries**: `exposures_risk.csv`, the app shows how many selected exposures are flagged as `is_at_risk`.
+
+### How to Run the Streamlit App
+
+1. Open a **terminal** in the project directory.  
+2. Make sure you’ve installed Streamlit and other dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run:
+   ```bash
+   streamlit run app.py
+   ```
+4. A local web server will start, and Streamlit will show a URL (default `http://localhost:8501`).  
+5. Open that URL in your browser to interact with the dashboard.
+
+#### Running in PyCharm
+
+- Create a new **Run Configuration**:  
+  - **Script**: `streamlit`  
+  - **Parameters**: `run app.py`  
+  - **Working directory**: the project’s root  
+  - Click **Run**.  
+  - The Streamlit UI will open in your browser.
+
+### Usage
+
+1. **Sidebar**:  
+   - **Location(s)**: multiselect from available location codes/IDs.  
+   - **Hurricane(s)**: choose from listed storm names.  
+   - **Year(s)** (if your data has a `year` column).  
+   - **Past X Years**: numeric input to define how many years of policy results to keep.  
+2. **Main Panel**:  
+   - Summaries of TIV, row counts, max wind speed, etc.  
+   - A bar chart of TIV by `PolicyYear`.  
+   - A map showing the lat/lon points of the filtered exposures.  
+   - A small table (or partial table) for risk info, e.g., which are `is_at_risk`.
+
+---
+
 
 ## License
 ```
