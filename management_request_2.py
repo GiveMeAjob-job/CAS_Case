@@ -109,7 +109,8 @@ def categorize_pml(row):
         return "Low"
 
 
-df_exposures_risk["PML_Category"] = df_exposures_risk["PML_Category"].fillna("Medium")
+df_exposures_risk2["PML_Category"] = df_exposures_risk2.apply(categorize_pml, axis=1)
+df_exposures_risk2["PML_Category"] = df_exposures_risk2["PML_Category"].fillna("Medium")
 
 
 df_pml_summary = (
@@ -118,8 +119,8 @@ df_pml_summary = (
     .reset_index(name="TIV_Sum")
 )
 print(df_pml_summary)
-
-
+print(df_exposures_risk2.columns)
+print(df_exposures_risk.columns)
 
 # ============ Angel从这里开始，不同风险等级，不同颜色 ============
 # 定义风险等级到颜色的映射
@@ -134,6 +135,7 @@ plt.figure(figsize=(10,8))
 
 # 按 PML_Category 分组绘制
 for category, group_data in df_exposures_risk2.groupby("PML_Category"):
+    category = str(category).strip()
     plt.scatter(
         group_data["Longitude"],
         group_data["Latitude"],
@@ -142,6 +144,13 @@ for category, group_data in df_exposures_risk2.groupby("PML_Category"):
         alpha=0.6,
         label=f"{category} Risk"
     )
+
+plt.legend(title="Risk Level")
+plt.title("Insurance Asset Distribution by Risk Category")
+plt.xlabel("Longitude")
+plt.ylabel("Latitude")
+
+plt.show()
 
 # ============ 2) 在图上叠加飓风范围（圆形） ============
 # 思路：以 (HurLon, HurLat) 为圆心，wind_radius 为半径
@@ -176,5 +185,3 @@ plt.xlabel("Longitude")
 plt.ylabel("Latitude")
 plt.legend()
 plt.show()
-
-

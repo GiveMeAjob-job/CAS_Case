@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d237109c-0033-4a9c-9486-c505d682a5a3" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/management_request_2_integrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/management_request_2_integrate.py" afterDir="false" />
-    </list>
+    <list default="true" id="d237109c-0033-4a9c-9486-c505d682a5a3" name="Changes" comment="." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,12 +20,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;GiveMeAjob-job&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "GiveMeAjob-job"
+    }
+  ],
+  "lastFilter": {
+    "assignee": "GiveMeAjob-job"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/GiveMeAjob-job/CAS_Case&quot;,
@@ -224,7 +225,7 @@
       <workItem from="1739194982112" duration="3116000" />
       <workItem from="1739653504630" duration="4313000" />
       <workItem from="1739674666952" duration="1976000" />
-      <workItem from="1740197418206" duration="1555000" />
+      <workItem from="1740197418206" duration="1950000" />
     </task>
     <task id="LOCAL-00001" summary="inital">
       <option name="closed" value="true" />
@@ -314,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739661595740</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary=".">
+      <option name="closed" value="true" />
+      <created>1740199232463</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740199232463</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
