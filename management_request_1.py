@@ -67,7 +67,7 @@ def main():
     plt.legend()
     plt.tight_layout()
     plt.savefig("pic/tiv_premium_over_time.png", dpi=300, bbox_inches="tight")
-    plt.show()
+    #plt.show()
 
     # 画 LossRatio:
     plt.figure(figsize=(8,5))
@@ -81,7 +81,8 @@ def main():
     plt.ylabel("Loss Ratio")
     plt.tight_layout()
     plt.savefig("pic/loss_ratio_over_time.png", dpi=300, bbox_inches="tight")
-    plt.show()
+    plt.axhline(y=1.0, color='r', linestyle='--', linewidth=1, label="Threshold (1.0)")
+    #plt.show()
 
     # 画 Premium_per_100_TIV:
     plt.figure(figsize=(8,5))
@@ -95,7 +96,7 @@ def main():
     plt.ylabel("Premium per $100 TIV")
     plt.tight_layout()
     plt.savefig("pic/premium_per_100_tiv_over_time.png", dpi=300, bbox_inches="tight")
-    plt.show()
+    #plt.show()
 
     # 画 LossCost:
     plt.figure(figsize=(8,5))
@@ -110,6 +111,7 @@ def main():
     plt.tight_layout()
     plt.savefig("pic/loss_cost_over_time.png", dpi=300, bbox_inches="tight")
     plt.show()
+
 
     # =============== 5) 输出结果表格 ===============
     df_year.to_csv("cleaned_data/exposures_summary_by_year.csv", index=False)
